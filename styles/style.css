@@ -1,0 +1,59 @@
+@media(min-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+body {
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+}
+
+.column-left {
+    flex: 1;
+    order: 1;
+}
+
+.column-center {
+    flex: 1;
+    order: 2;
+}
+
+.column-right {
+    flex: 1;
+    order: 3;
+}
+
+.content {
+    margin: auto;
+    width: 60%;
+}
+
+.heading {
+    text-shadow: 1px 1px 2px grey;
+}
+
+.keyword {
+    font-weight: bold;
+}
+
+#skill-list {
+    list-style-type: square;
+}
