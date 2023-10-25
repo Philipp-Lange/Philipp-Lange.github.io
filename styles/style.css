@@ -1,7 +1,8 @@
-@media(min-width: 1000px) {
+@media(max-width: 1000px) {
     .container {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
     }
 }
 
@@ -39,6 +40,11 @@ p {
 .column-right {
     flex: 1;
     order: 3;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .content {
