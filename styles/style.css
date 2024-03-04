@@ -1,31 +1,8 @@
 body {
-    text-align: center;
     font-family: "JetBrains Mono", sans-serif;
 }
 
-ul {
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-weight: bold;
-}
-
-p {
-    text-align: justify;
-}
-
-.heading {
-    text-shadow: 1px 1px 2px grey;
-}
-
-.keyword {
-    font-weight: bold;
-}
-
-.row {
-    min-height: 25px;
-    justify-content: space-between;
+.invalid-input {
+    background-color: rgba(255, 0, 0, 0.329);
+    border-color: red;
 }
