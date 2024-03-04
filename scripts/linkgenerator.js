@@ -62,12 +62,13 @@ function generateSearchStrings(searchStrings, longestName) {
         let searchString = " AND ";
         wordcount++;
 
-        while (wordcount < googleMaxQueryLength && searchTerms.length > 0) {
-            searchString += searchTerms.shift();
-            wordcount++;
-            if (searchTerms.length > 0 && (wordcount + 1) < googleMaxQueryLength) {
+        while (searchTerms.length > 0 && (wordcount) <= googleMaxQueryLength) {
+            let searchTerm = searchTerms.shift();
+            searchString += searchTerm;
+            wordcount += searchTerm.split(" ").length;
+
+            if (searchTerms.length > 0 && (wordcount) <= googleMaxQueryLength) {
                 searchString += " OR ";
-                wordcount++;
             }
         }
         searchStrings.push(searchString);
