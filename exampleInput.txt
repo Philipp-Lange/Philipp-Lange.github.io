@@ -1,9 +1,10 @@
-John Smith;Donald Duck;Bob Dylan;Philipp Lange;Jack Black
+John Smith
+Donald Duck
+Bob Dylan
+Philipp Lange
+Jack Black
 
 
 
 
 abuse;accusation;allegation;arrest;assault;attack;bankrupt;breach;bribe;chapter 11;chapter 7;chapter 12;charge;conspiracy;convicted;corrupt;court;criminal;deceive;deception;defendant;defraud;denied;deny;disciplined;discriminate;distort;embattled;fraud;guilty;harass;illegal;indict;inside info;insolvant;investigation;
-
-
-"" AND judgement or judgment or launder! or liquidat! or litigat! or manipul! or misappropriat! or misconduct or misdeme! or mismanag! or misrepresent! or negligen! or offen! or probat! or prosecut! or racketeer! or revocation or revoke* or risk! or sabotag! or sanction! or scam! or scandal! or separat! or steal! or stole* or sued or suing or suspen! or terroris! or theft or threat! or unlawful! or verdict or violat! or violen!

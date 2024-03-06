@@ -19,7 +19,9 @@ function checkInput() {
 function generateLinks() {
     let linksContainer = document.getElementById('links-container');
     linksContainer.innerHTML = "";
-    let names = namesInput.value.split(';');
+    let names = namesInput.value.split(/\r?\n/)
+        .map(item => item.trim())
+        .filter(item => item != "");
 
     // get longest name so we know how long we can make our search strings
     let longestName = 0;
@@ -62,12 +64,12 @@ function generateSearchStrings(searchStrings, longestName) {
         let searchString = " AND ";
         wordcount++;
 
-        while (searchTerms.length > 0 && (wordcount) <= googleMaxQueryLength) {
+        while (searchTerms.length > 0 && wordcount <= googleMaxQueryLength) {
             let searchTerm = searchTerms.shift();
             searchString += searchTerm;
             wordcount += searchTerm.split(" ").length;
 
-            if (searchTerms.length > 0 && (wordcount) <= googleMaxQueryLength) {
+            if (searchTerms.length > 0 && wordcount <= googleMaxQueryLength) {
                 searchString += " OR ";
             }
         }
@@ -75,7 +77,6 @@ function generateSearchStrings(searchStrings, longestName) {
     }
 
 }
-
 
 function buildURL(string) { return "https:///www.google.com/search?q=" + encodeURIComponent(string); }
 
