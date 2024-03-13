@@ -79,7 +79,9 @@ function generateLinksList(seperator, linksContainer, names, searchStrings) {
 }
 
 function generateSearchStrings(searchStrings, longestName) {
-    let searchTerms = searchTermInput.value.split(';');
+    let searchTerms = searchTermInput.value.split(';')
+        .map(item => item.trim()).
+        filter(item => item != "");
     while (searchTerms.length > 0) {
         let wordcount = longestName;
 
