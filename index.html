@@ -30,9 +30,24 @@
 				<textarea id="search-term-input" class="textarea-input" spellcheck="false" autocorrect="false"
 					autocapitalize="none"></textarea>
 			</div>
+			<div class="col-3">
+				<div class="row">
+					<h4>Options:</h4>
+				</div>
+				<div class="form-check form-switch">
+					<input class="form-check-input" type="checkbox" role="switch" id="list-with-quotes-switch" checked>
+					<label class="form-check-label non-selectable-text" for="list-with-quotes-switch">
+						Generate a list of links <b>with</b> quotation marks</label>
+				</div>
+				<div class="form-check form-switch">
+					<input class="form-check-input" type="checkbox" role="switch" id="list-without-quotes-switch">
+					<label class="form-check-label non-selectable-text" for="list-without-quotes-switch">
+						Generate a list of links <b>without</b> quotation marks</label>
+				</div>
+			</div>
 		</div>
 		<div class="row">
-			<button type="submit" id="submit-button" class="btn btn-primary">Generate</button>
+			<button type="submit" id="submit-button" class="btn btn-primary my-1">Generate</button>
 		</div>
 		<div id="links-container" class="row">
 		</div>

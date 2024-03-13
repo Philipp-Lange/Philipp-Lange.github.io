@@ -33,6 +33,28 @@ function generateLinks() {
     let searchStrings = [];
     generateSearchStrings(searchStrings, longestName);
 
+    if (document.getElementById('list-with-quotes-switch').checked) {
+        let listContainer = document.createElement('div');
+        listContainer.classList.add('col');
+        let listType = document.createElement('h4');
+        listType.textContent = "List of Links With Quotation Marks"
+        listContainer.appendChild(listType);
+        generateLinksList("\"", listContainer, names, searchStrings);
+        linksContainer.appendChild(listContainer);
+    }
+
+    if (document.getElementById('list-without-quotes-switch').checked) {
+        let listContainer = document.createElement('div');
+        listContainer.classList.add('col');
+        let listType = document.createElement('h4');
+        listType.textContent = "List of Links Without Quotation Marks"
+        listContainer.appendChild(listType);
+        generateLinksList("", listContainer, names, searchStrings);
+        linksContainer.appendChild(listContainer);
+    }
+}
+
+function generateLinksList(seperator, linksContainer, names, searchStrings) {
     for (let i = 0; i < names.length; i++) {
         let container = document.createElement('div');
         let name = document.createElement('h5');
@@ -46,7 +68,7 @@ function generateLinks() {
             let linkAnchor = document.createElement('a');
             linkAnchor.setAttribute('target', '_blank');
             linkAnchor.textContent = "Link " + (j + 1);
-            linkAnchor.href = buildURL("\"" + names[i] + "\"" + searchStrings[j]);
+            linkAnchor.href = buildURL(seperator + names[i] + seperator + searchStrings[j]);
             link.appendChild(linkAnchor);
             linksList.appendChild(link);
         }
