@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Spreadsheet Converter</title>
+</head>
+
+<body>
+    <div>
+        <label for="company-number">Current Column</label>
+        <input type="text" id="current-col">
+    </div>
+    <div>
+        <label for="company-number">Previous Column</label>
+        <input type="text" id="previous-col">
+    </div>
+    <div>
+        <label for="company-number">Company Number</label>
+        <input type="text" id="company-number">
+    </div>
+    <div>
+        <label for="company-number">Primary Industry Classification</label>
+        <input type="text" id="primary-industry-classification">
+    </div>
+    <div>
+        <label for="company-number">Primary Industry</label>
+        <input type="text" id="primary-industry">
+    </div>
+    <div>
+        <label for="company-number">Primary Country</label>
+        <input type="text" id="primary-country">
+    </div>
+    <div>
+        <label for="company-number">Entity Legal Form</label>
+        <input type="text" id="entity-legal-form">
+    </div>
+    <div>
+        <input type="file" id="file-upload" accept=".xls, .xlsx">
+    </div>
+
+
+
+    <script lang="javascript" src="scripts/xlsx.full.min.js"></script>
+    <script type="module" lang="javascript" src="scripts/spreadsheetconverter.js"></script>
+</body>
+
+</html>
