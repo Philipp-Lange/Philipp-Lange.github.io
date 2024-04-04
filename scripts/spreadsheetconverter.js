@@ -144,8 +144,6 @@ function fillOutput(worksheet) {
     return output;
 }
 
-document.getElementById('file-upload').addEventListener('change', convertSpreadsheet, false);
-
 function initialiseOutput() {
     var output = {
         entityInternationalName: [],
@@ -215,3 +213,5 @@ function initialiseOutput() {
     };
     return output;
 }
+
+document.getElementById('file-upload').addEventListener('change', convertSpreadsheet, false);
