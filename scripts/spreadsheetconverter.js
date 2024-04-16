@@ -6,8 +6,8 @@ function convertDate(date) {
     return parts[0] + '/' + parts[1] + '/' + parts[2];
 }
 
-async function convertSpreadsheet(e) {
-    const file = e.target.files[0];
+async function convertSpreadsheet() {
+    const file = document.getElementById('file-upload').files[0];
     const data = await file.arrayBuffer();
     var workbook = XLSX.read(data);
     var worksheet = workbook.Sheets['Financial Review'];
@@ -103,9 +103,9 @@ function fillOutput(worksheet) {
         output.totalAssets.push(getValue(worksheet, currentCol + '36'));
         output.totalAssetsPreviousYear.push(getValue(worksheet, previousCol + '36'));
         output.notesPayable.push(getValue(worksheet, currentCol + '44'));
-        output.debtCurrentMaturities.push(getValue(worksheet, currentCol + '44') + getValue(worksheet, currentCol + '29'));
-        output.shortTermDebt.push("");
-        output.shortTermDebtPreviousYear.push("");
+        output.debtCurrentMaturities.push("");
+        output.shortTermDebt.push(getValue(worksheet, currentCol + '44') + getValue(worksheet, currentCol + '45'));
+        output.shortTermDebtPreviousYear.push(getValue(worksheet, previousCol + '44') + getValue(worksheet, previousCol + '45'));
         output.totalAccountsPayable.push(getValue(worksheet, currentCol + '41'));
         output.totalAccountsPayablePreviousYear.push(getValue(worksheet, previousCol + '41'));
         output.totalCurrentLiabilities.push(getValue(worksheet, currentCol + '52'));
@@ -216,4 +216,4 @@ function initialiseOutput() {
     return output;
 }
 
-document.getElementById('file-upload').addEventListener('change', convertSpreadsheet, false);
+document.getElementById('convert-btn').addEventListener('click', convertSpreadsheet, false);
