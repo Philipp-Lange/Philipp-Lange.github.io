@@ -1,6 +1,8 @@
 function convertDate(date) {
     var parts = date.split('/');
-    parts[2] = '20' + parts[2];
+    if (parts[2].length == 2) {
+        parts[2] = '20' + parts[2];
+    }
     return parts[0] + '/' + parts[1] + '/' + parts[2];
 }
 
