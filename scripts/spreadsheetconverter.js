@@ -19,6 +19,13 @@ async function convertSpreadsheet() {
     download(csvData);
 }
 
+function convertValue(value) {
+    var sUnits = document.getElementById("spread-units").value;
+    var mUnits = document.getElementById("moodys-units").value;
+
+    return value * sUnits / mUnits;
+}
+
 function csvMaker(data) {
     let csv = '';
     let keys = Object.keys(data);
@@ -42,14 +49,6 @@ function download(data) {
     URL.revokeObjectURL(link.href);
 }
 
-function getAuditQuality(financialType) {
-    if (financialType == "Audited") {
-        return financialType;
-    } else {
-        return "Unkown";
-    }
-}
-
 function getNextChar(char) {
     return String.fromCharCode(char.charCodeAt(0) + 1);
 }
@@ -65,7 +64,8 @@ function getValue(worksheet, target) {
     if (worksheet[target] === undefined) {
         return 0;
     } else {
-        return worksheet[target].v;
+        let value = worksheet[target].v
+        return convertValue(value);
     }
 }
 
@@ -85,8 +85,13 @@ function fillOutput(worksheet) {
         output.primaryCountry.push(document.getElementById("primary-country").value);
         output.primaryStateProvince.push("");
         output.currency.push(worksheet['A2'].v);
-        output.entityLegalForm.push(document.getElementById("entity-legal-form").value);
-        output.auditQuality.push(getAuditQuality(worksheet[currentCol + '12'].w));
+
+        // Moody's appears to overwrite this value anyway with whatever is already saved for that entity
+        output.entityLegalForm.push("");
+
+        // Moody's doesn't seem to parse this data correctly so just leaving it blank for now
+        output.auditQuality.push("");
+
         output.cashAndMarketableSecurities.push(getValue(worksheet, currentCol + '18'));
         output.cashAndMarketableSecuritiesPreviousYear.push(getValue(worksheet, previousCol + '18'));
         output.totalAccountsReceivable.push(getValue(worksheet, currentCol + '21'));
