@@ -80,9 +80,9 @@ function fillOutput(worksheet) {
         output.entityIdentifierbvd.push(document.getElementById("company-number").value);
         output.financialStatementDate.push(convertDate(worksheet[currentCol.concat('', '11')].w));
         output.asOfDate.push("");
-        output.primaryIndustryClassification.push(document.getElementById("primary-industry-classification").value);
+        output.primaryIndustryClassification.push("");
         output.primaryIndustry.push(document.getElementById("primary-industry").value);
-        output.primaryCountry.push(document.getElementById("primary-country").value);
+        output.primaryCountry.push("");
         output.primaryStateProvince.push("");
         output.currency.push(worksheet['A2'].v);
 
