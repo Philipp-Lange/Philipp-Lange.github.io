@@ -81,7 +81,7 @@ function fillOutput(worksheet) {
         output.financialStatementDate.push(convertDate(worksheet[currentCol.concat('', '11')].w));
         output.asOfDate.push("");
         output.primaryIndustryClassification.push("");
-        output.primaryIndustry.push(document.getElementById("primary-industry").value);
+        output.primaryIndustry.push("");
         output.primaryCountry.push("");
         output.primaryStateProvince.push("");
         output.currency.push(worksheet['A2'].v);
