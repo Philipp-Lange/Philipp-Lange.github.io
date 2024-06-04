@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="704.1637"
+   height="313.42184"
+   viewBox="0 0 186.30998 82.926196"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(6.5756463,4.7490778)">
+    <rect
+       style="fill:#f5f5f5;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.08001"
+       id="rect3"
+       width="186.30997"
+       height="82.926193"
+       x="-6.5756459"
+       y="-4.7490773"
+       ry="0.52524465" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:20.1947px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration:underline;text-decoration-line:underline;fill:#5050ff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.08001"
+       x="5.2606883"
+       y="41.815109"
+       id="text2"
+       transform="scale(1.0222241,0.97825909)"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:20.1947px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5050ff;fill-opacity:1;stroke-width:0"
+         x="5.2606883"
+         y="41.815109">Link</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.7556px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:6.08001"
+       x="62.140934"
+       y="40.28371"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:19.7556px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0"
+         x="62.140934"
+         y="40.28371">Generator</tspan></text>
+  </g>
+</svg>

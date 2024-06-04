@@ -18,3 +18,59 @@ body {
     min-height: 25px;
     height: 25vh;
 }
+
+.background {
+    background: whitesmoke;
+}
+
+.link-img {
+    background: none;
+    max-width: 100%;
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 10px;
+    border: 1em solid #555;
+    border-color: black;
+    aspect-ratio: 650/250;
+    display: block;
+    z-index: 2;
+    width: 100%;
+    min-width: 100%;
+    color: black;
+}
+
+.site-title {
+    text-align: center;
+    margin-top: 55px;
+    font-weight: 700;
+    min-height: 55px;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+}
+
+.site-tagline {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    opacity: .7;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: light;
+}
+
+.projects {
+    display: grid;
+    margin-top: 10px;
+    font-size: 0;
+    grid-template-rows: auto;
+    grid-gap: 20px 22px;
+    justify-content: center;
+    padding: 0 25px;
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

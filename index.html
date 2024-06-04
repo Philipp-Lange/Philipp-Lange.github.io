@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Google Link Generator</title>
+	<title>philipp-lange</title>
 
 	<!--Mobile Responsiveness-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,47 +15,30 @@
 	<!--Font Import-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
 
 	<!--Stylesheet Import-->
 	<link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body class="background">
 	<div class="container">
-		<div class="row py-3">
-			<div class="col">
-				<h4>Names:</h4>
-				<textarea id="name-input" class="textarea-input" spellcheck="false" autocorrect="false"
-					autocapitalize="none"></textarea>
-			</div>
-			<div class="col">
-				<h4>Search Terms:</h4>
-				<textarea id="search-term-input" class="textarea-input" spellcheck="false" autocorrect="false"
-					autocapitalize="none"></textarea>
-			</div>
-			<div class="col-3">
-				<div class="row">
-					<h4>Options:</h4>
-				</div>
-				<div class="form-check form-switch">
-					<input class="form-check-input" type="checkbox" role="switch" id="list-with-quotes-switch" checked>
-					<label class="form-check-label non-selectable-text" for="list-with-quotes-switch">
-						Generate a list of links <b>with</b> quotation marks</label>
-				</div>
-				<div class="form-check form-switch">
-					<input class="form-check-input" type="checkbox" role="switch" id="list-without-quotes-switch">
-					<label class="form-check-label non-selectable-text" for="list-without-quotes-switch">
-						Generate a list of links <b>without</b> quotation marks</label>
-				</div>
-			</div>
+		<img class="site-title" alt="philipplange.dev logo" src="/images/logo.svg">
+		<div class="site-tagline">a website by philipp</div>
+		<div class="projects">
+			<a class="link" href="/link-generator/generator.html">
+				<img class="link-img" onload="true" alt="Link Generator" src="/images/link-generator-logo.png"
+					loading="lazy">
+			</a>
+			<a class="link" href="/spread-convert/converter.html">
+				<img class="link-img" onload="true" alt="Spread Converter" src="/images/spread-converter.png"
+					loading="lazy">
+			</a>
 		</div>
-		<div class="row">
-			<button type="submit" id="submit-button" class="btn btn-primary my-1">Generate</button>
-		</div>
-		<div id="links-container" class="row">
-		</div>
+		<div class="site-tagline">design is heavily inspired by neal.fun</div>
+
 	</div>
 
 	<!--Scripts Import-->
