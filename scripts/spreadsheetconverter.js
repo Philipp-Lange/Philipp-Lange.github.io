@@ -92,8 +92,11 @@ function fillOutput(worksheet) {
         // Moody's doesn't seem to parse this data correctly so just leaving it blank for now
         output.auditQuality.push("");
 
-        output.cashAndMarketableSecurities.push(getValue(worksheet, currentCol + '18'));
-        output.cashAndMarketableSecuritiesPreviousYear.push(getValue(worksheet, previousCol + '18'));
+        // not including restricted cash as Moody's says "most liquid". Restricted cash may have not always be liquid, and if it is only under certain conditions
+        output.cashAndMarketableSecurities.push(getValue(worksheet, currentCol + '18') + getValue(worksheet, currentCol + '20'));
+        output.cashAndMarketableSecuritiesPreviousYear.push(getValue(worksheet, previousCol + '18') + getValue(worksheet, previousCol + '20'));
+
+
         output.totalAccountsReceivable.push(getValue(worksheet, currentCol + '21'));
         output.totalAccountsReceivablePreviousYear.push(getValue(worksheet, previousCol + '21'));
         output.totalInventory.push(getValue(worksheet, currentCol + '22'));
