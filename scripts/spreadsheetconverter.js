@@ -110,10 +110,10 @@ function fillOutput(worksheet) {
         output.totalIntangibleAssets.push(getValue(worksheet, currentCol + '30'));
         output.totalAssets.push(getValue(worksheet, currentCol + '36'));
         output.totalAssetsPreviousYear.push(getValue(worksheet, previousCol + '36'));
-        output.notesPayable.push(getValue(worksheet, currentCol + '44'));
-        output.debtCurrentMaturities.push("");
-        output.shortTermDebt.push(getValue(worksheet, currentCol + '44') + getValue(worksheet, currentCol + '45'));
-        output.shortTermDebtPreviousYear.push(getValue(worksheet, previousCol + '44') + getValue(worksheet, previousCol + '45'));
+        output.notesPayable.push("");
+        output.debtCurrentMaturities.push(getValue(worksheet, currentCol + '44') + getValue(worksheet, currentCol + '45'));
+        output.shortTermDebt.push(getValue(worksheet, currentCol + '43') + getValue(worksheet, currentCol + '44') + getValue(worksheet, currentCol + '45'));
+        output.shortTermDebtPreviousYear.push(getValue(worksheet, previousCol + '43') + getValue(worksheet, previousCol + '44') + getValue(worksheet, previousCol + '45'));
         output.totalAccountsPayable.push(getValue(worksheet, currentCol + '41'));
         output.totalAccountsPayablePreviousYear.push(getValue(worksheet, previousCol + '41'));
         output.totalCurrentLiabilities.push(getValue(worksheet, currentCol + '52'));
