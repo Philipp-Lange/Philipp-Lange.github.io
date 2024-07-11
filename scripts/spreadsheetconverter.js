@@ -1,3 +1,5 @@
+var spreadUnits = 1;
+
 function convertDate(date) {
     var parts = date.split('/');
     if (parts[2].length == 2) {
@@ -20,10 +22,10 @@ async function convertSpreadsheet() {
 }
 
 function convertValue(value) {
-    var sUnits = document.getElementById("spread-units").value;
+    //var sUnits = document.getElementById("spread-units").value;
     var mUnits = document.getElementById("moodys-units").value;
 
-    return value * sUnits / mUnits;
+    return value * spreadUnits / mUnits;
 }
 
 function csvMaker(data) {
@@ -73,6 +75,7 @@ function fillOutput(worksheet) {
     const lastCol = document.getElementById('most-recent-col').value;
     var currentCol = 'B';
     var output = initialiseOutput();
+    spreadUnits = worksheet['A6'].v;
 
     while (currentCol <= lastCol) {
         var previousCol = getPreviousChar(currentCol);
